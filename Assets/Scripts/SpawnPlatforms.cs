@@ -6,6 +6,7 @@ public class SpawnPlatforms : MonoBehaviour
 {
     public GameObject prefab;  // The default prefab to spawn
     public GameObject triggerPrefab;  // The trigger prefab to spawn every 5 prefabs
+    public GameObject finalPrefab;  // The prefab to spawn at the end
     public Vector3 startPosition = new Vector3(0, 0, 0);  // The starting position for the first prefab
     public int numberOfPrefabs = 20;  // The number of prefabs to spawn
     public float yPositionDecrement = 2f;  // The decrement in Y position for each subsequent prefab
@@ -45,5 +46,10 @@ public class SpawnPlatforms : MonoBehaviour
                 Instantiate(prefab, spawnPosition, spawnRotation);
             }
         }
+
+        // Spawn the final prefab at the end
+        Vector3 finalSpawnPosition = startPosition + (numberOfPrefabs * spawnPositionOffset); // Position after the last prefab
+        Quaternion finalRotation = Quaternion.identity; // No rotation or you can customize if needed
+        Instantiate(finalPrefab, finalSpawnPosition, finalRotation);
     }
 }

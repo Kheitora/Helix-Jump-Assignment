@@ -9,6 +9,9 @@ TagManager:
   - Platform1
   - Platform2
   - Platform
+  - EndGame
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

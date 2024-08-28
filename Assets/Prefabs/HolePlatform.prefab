@@ -2133,7 +2133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c84b73ffb15424a8e49af21cc0e972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
+  rotationSpeed: 0.5
   topHalfTag: Platform1
   bottomHalfTag: Platform2
 --- !u!1 &3738322657147436431

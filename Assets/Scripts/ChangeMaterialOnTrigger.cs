@@ -19,20 +19,15 @@ public class ChangeMaterialOnTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered Trigger with tag: " + other.gameObject.tag);
-        Debug.Log("Entered Trigger with tag: " + other.transform.root.gameObject.tag);
-
         int min = 0;
         int max = materials.Length;
         excludeValue = oldIndex;
 
         int newIndex = RandomRangeExclude(min, max, excludeValue);
-        Debug.Log("Random value (excluding " + excludeValue + "): " + newIndex);
 
 
         if (other.gameObject.tag == "Trigger"){
             objectRenderer.material = materials[newIndex];
-            Debug.Log("Changing material to " + materials[newIndex]);
             oldIndex = newIndex;
         }
     }

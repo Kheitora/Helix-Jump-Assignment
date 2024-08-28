@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class SwipeToSpin : MonoBehaviour
 {
-    public float rotationSpeed = 10f;  // Speed of rotation based on the swipe or mouse drag
+public float rotationSpeed = 0.1f;  // Speed of rotation based on the swipe or mouse drag
     public string topHalfTag = "Platform1";  // Tag for objects that should rotate when swiping in the top half
     public string bottomHalfTag = "Platform2";  // Tag for objects that should rotate when swiping in the bottom half
+    public bool canRotate = true;  // Controls whether rotation is allowed
 
     private Vector2 startTouchPosition;  // Position where the touch or mouse drag started
     private bool isSwiping = false;
 
     void Update()
     {
+        if (!canRotate) return;  // Exit if rotation is not allowed
+
         // Screen height is divided into two halves
         float screenHeight = Screen.height;
         float halfScreenHeight = screenHeight / 2;
