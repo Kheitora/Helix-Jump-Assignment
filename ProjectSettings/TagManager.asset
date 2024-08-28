@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Platform
   - Level
   - Trigger
+  - Platform1
+  - Platform2
+  - Platform
   layers:
   - Default
   - TransparentFX

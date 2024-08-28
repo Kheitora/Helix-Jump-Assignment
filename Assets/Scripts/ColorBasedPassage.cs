@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ColorBasedPassage : MonoBehaviour
 {
-    public string targetTag = "ColorObstacle"; // Tag of the objects that should be checked for color matching
-    public string passThroughLayer = "PassThrough"; // Layer name for passable objects
+    public string targetTag; // Tag of the objects that should be checked for color matching
+    public string passThroughLayer; // Layer name for passable objects
 
     private Renderer objectRenderer;
     private int defaultLayer;

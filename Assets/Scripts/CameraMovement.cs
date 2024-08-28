@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-     public Transform target;  // The object that the camera should follow
+    public Transform target;  // The object that the camera should follow
     public Vector3 offset;  // Offset position from the target
     public Vector3 tiltAngle;  // The tilt angle of the camera (e.g., x = -10 for a slight downward tilt)
 
