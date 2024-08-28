@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Platform
   - Level
+  - Trigger
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PassThrough
   - Water
   - UI
   - 

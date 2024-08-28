@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 1817257097425739893}
   - component: {fileID: 2562234252599591143}
   - component: {fileID: 7017905420893667933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (3)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c6ba164a5c8edb4a85c2dc98414699b, type: 2}
+  - {fileID: 2100000, guid: 15031af13de240b4ba81a56498da0410, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 8269171068761581425}
   - component: {fileID: 8545681871341614841}
   - component: {fileID: 7892857866248479110}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c6ba164a5c8edb4a85c2dc98414699b, type: 2}
+  - {fileID: 2100000, guid: 41ab635f6d0ad8c49afb51a090257434, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 5045886593559211367}
   - component: {fileID: 3554181181752724655}
   - component: {fileID: 5184517732225252708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (8)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1973,7 +1973,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c6ba164a5c8edb4a85c2dc98414699b, type: 2}
+  - {fileID: 2100000, guid: d52eda98c711f4a45aa9c53ff3b75ad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2038,7 +2038,7 @@ GameObject:
   - component: {fileID: 3887646146598147606}
   - component: {fileID: 6271678932999532745}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: ColorPlatform
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2958,7 +2958,7 @@ GameObject:
   - component: {fileID: 8254891890952107767}
   - component: {fileID: 99041301633412567}
   - component: {fileID: 673223676116553422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (7)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3297,7 +3297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c6ba164a5c8edb4a85c2dc98414699b, type: 2}
+  - {fileID: 2100000, guid: d52eda98c711f4a45aa9c53ff3b75ad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3363,7 +3363,7 @@ GameObject:
   - component: {fileID: 986141974571514221}
   - component: {fileID: 5720932113094294961}
   - component: {fileID: 5157194685535822896}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (11)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3702,7 +3702,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c6ba164a5c8edb4a85c2dc98414699b, type: 2}
+  - {fileID: 2100000, guid: 41ab635f6d0ad8c49afb51a090257434, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4173,7 +4173,7 @@ GameObject:
   - component: {fileID: 8006662844476474552}
   - component: {fileID: 2764738822150459080}
   - component: {fileID: 8867744202084906624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (4)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -4512,7 +4512,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c6ba164a5c8edb4a85c2dc98414699b, type: 2}
+  - {fileID: 2100000, guid: 15031af13de240b4ba81a56498da0410, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
