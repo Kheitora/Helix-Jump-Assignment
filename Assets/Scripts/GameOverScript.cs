@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameOverScript : MonoBehaviour
@@ -8,6 +9,8 @@ public class GameOverScript : MonoBehaviour
     public List<TextMeshProUGUI> gameEndTexts;  // List of TextMeshProUGUI objects
     public List<Rigidbody> ballRigidbodies;     // List of associated Rigidbody components
     public List<SwipeToSpin> swipeToSpinScripts; // List of SwipeToSpin scripts to disable
+    public List<Image> images; // List of image components
+    public Button replayButton;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -46,6 +49,16 @@ public class GameOverScript : MonoBehaviour
                 text.gameObject.SetActive(true);
             }
         }
+
+        foreach (Image image in images)
+        {
+            if(image != null)
+            {
+                image.gameObject.SetActive(true);
+            }
+        }
+
+        replayButton.gameObject.SetActive(true);
     }
 
     private void ConstrainRigidbodies()
