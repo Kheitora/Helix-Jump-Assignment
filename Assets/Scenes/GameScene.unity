@@ -343,10 +343,13 @@ MonoBehaviour:
   prefab: {fileID: 3303011163694005048, guid: 6bddd37701cf0894d96b286405286409, type: 3}
   triggerPrefab: {fileID: 3303011163694005048, guid: d7455cb1f69e44a469d124ccc71a572a, type: 3}
   finalPrefab: {fileID: 3303011163694005048, guid: 3580f0ad77210434dbe52745f4afb725, type: 3}
+  specialPrefab: {fileID: 3303011163694005048, guid: 376b9972479458e45b9101ed32aebd89, type: 3}
+  additionalPrefab: {fileID: 8722808239192387108, guid: eeccc0c1a79d2b244bfaad7bcf691c45, type: 3}
   startPosition: {x: 20, y: -1, z: 1}
   numberOfPrefabs: 19
   yPositionDecrement: 2
   spawnPositionOffset: {x: 0, y: -2, z: 0}
+  specialPrefabChance: 0.1
 --- !u!1 &296252556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1501,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &742049460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742049461}
+  - component: {fileID: 742049462}
+  m_Layer: 0
+  m_Name: PowerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &742049461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742049460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1712722611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742049462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742049460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57dd3c2286cb3d43b84b8b8f0ae1406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &934004668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,10 +1896,13 @@ MonoBehaviour:
   prefab: {fileID: 3303011163694005048, guid: 90d7432336cf4cf489e6b1dcd047872e, type: 3}
   triggerPrefab: {fileID: 3303011163694005048, guid: f1b9e1e056066ed4399a3629a3a16213, type: 3}
   finalPrefab: {fileID: 3303011163694005048, guid: d65e455485843c24eb0112ec4c19383d, type: 3}
+  specialPrefab: {fileID: 3303011163694005048, guid: c3dcae05597a045438c7671e3ae0a10e, type: 3}
+  additionalPrefab: {fileID: 8722808239192387108, guid: 534ae468912902d4eb523ab650a0f6d5, type: 3}
   startPosition: {x: 0, y: -1, z: 1}
   numberOfPrefabs: 19
   yPositionDecrement: 2
   spawnPositionOffset: {x: 0, y: -2, z: 0}
+  specialPrefabChance: 0.1
 --- !u!1 &1163224688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,10 +2189,13 @@ MonoBehaviour:
   prefab: {fileID: 3303011163694005048, guid: 5bb4b50114f8dba49a6e209860143640, type: 3}
   triggerPrefab: {fileID: 0}
   finalPrefab: {fileID: 0}
+  specialPrefab: {fileID: 0}
+  additionalPrefab: {fileID: 0}
   startPosition: {x: 0, y: -1, z: 1}
   numberOfPrefabs: 20
   yPositionDecrement: 2
   spawnPositionOffset: {x: 0, y: -2, z: 0}
+  specialPrefabChance: 0.1
 --- !u!4 &1634032556
 Transform:
   m_ObjectHideFlags: 0
@@ -2191,6 +2244,7 @@ Transform:
   - {fileID: 294373825}
   - {fileID: 1109313279}
   - {fileID: 1793495090}
+  - {fileID: 742049461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793495089
