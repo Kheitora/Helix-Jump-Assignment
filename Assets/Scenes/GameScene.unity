@@ -221,6 +221,52 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &223974226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223974227}
+  - component: {fileID: 223974228}
+  m_Layer: 0
+  m_Name: TouchManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223974227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1712722611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223974228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594e18be0322dd544a1282abb5bee1e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topHalfTag: Platform1
+  bottomHalfTag: Platform2
 --- !u!1 &242655583
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +392,7 @@ MonoBehaviour:
   specialPrefab: {fileID: 3303011163694005048, guid: 376b9972479458e45b9101ed32aebd89, type: 3}
   additionalPrefab: {fileID: 8722808239192387108, guid: eeccc0c1a79d2b244bfaad7bcf691c45, type: 3}
   startPosition: {x: 20, y: -1, z: 1}
-  numberOfPrefabs: 19
+  numberOfPrefabs: 49
   yPositionDecrement: 2
   spawnPositionOffset: {x: 0, y: -2, z: 0}
   specialPrefabChance: 0.1
@@ -1355,13 +1401,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eec694a72ffb5418dbc974387a01e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchInputHandler: {fileID: 0}
   gameEndTexts:
   - {fileID: 615043191}
   - {fileID: 400479643}
   ballRigidbodies:
   - {fileID: 616715842}
   - {fileID: 934004672}
-  swipeToSpinScripts: []
   images:
   - {fileID: 242655585}
   - {fileID: 296252558}
@@ -1545,6 +1591,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57dd3c2286cb3d43b84b8b8f0ae1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &782628375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782628376}
+  - component: {fileID: 782628377}
+  m_Layer: 0
+  m_Name: SwipeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &782628376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782628375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1712722611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782628377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782628375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18ea4e78a103b144b70ccd4dd267279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
+  topHalfTag: Platform1
+  bottomHalfTag: Platform2
+  canRotate: 1
 --- !u!1 &934004668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,13 +1833,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19eec694a72ffb5418dbc974387a01e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchInputHandler: {fileID: 0}
   gameEndTexts:
   - {fileID: 615043191}
   - {fileID: 400479643}
   ballRigidbodies:
   - {fileID: 616715842}
   - {fileID: 934004672}
-  swipeToSpinScripts: []
   images:
   - {fileID: 242655585}
   - {fileID: 296252558}
@@ -1899,7 +1993,7 @@ MonoBehaviour:
   specialPrefab: {fileID: 3303011163694005048, guid: c3dcae05597a045438c7671e3ae0a10e, type: 3}
   additionalPrefab: {fileID: 8722808239192387108, guid: 534ae468912902d4eb523ab650a0f6d5, type: 3}
   startPosition: {x: 0, y: -1, z: 1}
-  numberOfPrefabs: 19
+  numberOfPrefabs: 49
   yPositionDecrement: 2
   spawnPositionOffset: {x: 0, y: -2, z: 0}
   specialPrefabChance: 0.1
@@ -2245,6 +2339,8 @@ Transform:
   - {fileID: 1109313279}
   - {fileID: 1793495090}
   - {fileID: 742049461}
+  - {fileID: 782628376}
+  - {fileID: 223974227}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793495089

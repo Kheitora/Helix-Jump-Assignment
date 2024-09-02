@@ -2036,7 +2036,6 @@ GameObject:
   - component: {fileID: 9000551144188126631}
   - component: {fileID: 4352396564466533778}
   - component: {fileID: 3887646146598147606}
-  - component: {fileID: 6271678932999532745}
   m_Layer: 0
   m_Name: HolePlatform
   m_TagString: Platform
@@ -2121,21 +2120,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6271678932999532745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303011163694005048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c84b73ffb15424a8e49af21cc0e972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 0.5
-  topHalfTag: Platform1
-  bottomHalfTag: Platform2
 --- !u!1 &3738322657147436431
 GameObject:
   m_ObjectHideFlags: 0
