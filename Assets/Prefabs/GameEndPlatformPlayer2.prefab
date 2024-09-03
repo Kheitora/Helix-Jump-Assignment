@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagToRotate: Platform1
   rotationSpeed: 10
-  invertRotation: 1
+  invertRotation: 0
 --- !u!1 &7348236748544943468
 GameObject:
   m_ObjectHideFlags: 0
