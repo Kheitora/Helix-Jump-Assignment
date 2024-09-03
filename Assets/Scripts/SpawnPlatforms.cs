@@ -20,14 +20,12 @@ public class SpawnPlatforms : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < numberOfPrefabs; i++)
-        {
+        for (int i = 0; i < numberOfPrefabs; i++){
             // Calculate the position for the current prefab
             Vector3 spawnPosition = startPosition + (i * spawnPositionOffset);
 
             float randomYRotation;
-            do
-            {
+            do{
                 // Randomly choose a Y rotation in increments of 30 degrees
                 randomYRotation = Random.Range(0, 12) * 30f;  // 12 possible values: 0, 30, 60, ..., 330
 
@@ -41,37 +39,31 @@ public class SpawnPlatforms : MonoBehaviour
             Quaternion spawnRotation = Quaternion.Euler(0, randomYRotation, 0);
 
             // Determine whether to instantiate the regular prefab, trigger prefab, or special prefab
-            if ((i + 1) % 5 == 0)  // Every 5th prefab (e.g., 5th, 10th, 15th...)
-            {
+            if ((i + 1) % 5 == 0){  // Every 5th prefab (e.g., 5th, 10th, 15th...)
                 Instantiate(triggerPrefab, spawnPosition, spawnRotation);
             }
-            else
-            {
+            else{
                 bool forceSpecialPrefab = false;
 
                 // Check if we need to force the spawning of special prefabs
-                if (specialPrefabsSpawned < 2 && i >= numberOfPrefabs - 2)
-                {
+                if (specialPrefabsSpawned < 2 && i >= numberOfPrefabs - 2){
                     forceSpecialPrefab = true;
                 }
 
-                if (Random.value < specialPrefabChance || forceSpecialPrefab)  // Randomly or forcibly replace normal prefab with special prefab
-                {
+                if (Random.value < specialPrefabChance || forceSpecialPrefab){  // Randomly or forcibly replace normal prefab with special prefab
                     GameObject spawnedSpecial = Instantiate(specialPrefab, spawnPosition, spawnRotation);
                     specialPrefabsSpawned++;
 
                     // Find the spawn point as a child of a child within the special prefab
                     Transform spawnPoint = spawnedSpecial.transform.Find("Pipe (2)/SpawnPoint");
 
-                    if (spawnPoint != null)
-                    {
+                    if (spawnPoint != null){
                         // Instantiate the additional prefab and parent it to the special prefab
                         GameObject spawnedAdditional = Instantiate(additionalPrefab, spawnPoint.position, spawnPoint.rotation);
                         spawnedAdditional.transform.SetParent(spawnPoint, true);
                     }
                 }
-                else
-                {
+                else{
                     Instantiate(prefab, spawnPosition, spawnRotation);
                 }
             }

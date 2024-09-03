@@ -36,8 +36,7 @@ public class ChangeMaterialOnTrigger : MonoBehaviour
     {
         int randomValue = Random.Range(min, max - 1); // Generate a random number from min to max-1
 
-        if (randomValue >= excludeValue)
-        {
+        if (randomValue >= excludeValue){
             randomValue += 1; // Adjust the random number to skip over the excludeValue
         }
 

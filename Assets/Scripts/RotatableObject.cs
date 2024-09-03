@@ -20,8 +20,7 @@ public class RotatableObject : MonoBehaviour
 
     void RotateObject(string targetTag, float movement)
     {
-        if (targetTag == tagToRotate)
-        {
+        if (targetTag == tagToRotate){
             // Invert rotation if needed
             float direction = invertRotation ? 1 : -1;
             transform.Rotate(Vector3.up, direction * movement * rotationSpeed * Time.deltaTime);

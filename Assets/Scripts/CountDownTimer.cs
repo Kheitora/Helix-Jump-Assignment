@@ -26,25 +26,19 @@ public class CountDownTimer : MonoBehaviour
     {
         int currentCount = startCount;
 
-        while (currentCount > 0)
-        {
+        while (currentCount > 0){
             // Update the TextMeshPro object with the current count
             countdownText.text = currentCount.ToString();
 
             // If the countdown reaches 3, trigger the fade-out on all objects
-            if (currentCount == 3)
-            {
-                foreach (FadeOutText fadeOut in fadeOutText)
-                {
-                    if (fadeOut != null)
-                    {
+            if (currentCount == 3){
+                foreach (FadeOutText fadeOut in fadeOutText){
+                    if (fadeOut != null){
                         fadeOut.StartFadeOut();
                     }
                 }
-                foreach (Image image in fadeOutImages)
-                {
-                    if (image != null)
-                    {
+                foreach (Image image in fadeOutImages){
+                    if (image != null){
                         StartCoroutine(FadeOutImage(image));
                     }
                 }
@@ -75,8 +69,7 @@ public class CountDownTimer : MonoBehaviour
         float elapsedTime = 0f;
         Color originalColor = image.color;
 
-        while (elapsedTime < duration)
-        {
+        while (elapsedTime < duration){
             elapsedTime += Time.deltaTime;
             float alpha = Mathf.Lerp(1f, 0f, elapsedTime / duration);
             image.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
@@ -89,20 +82,16 @@ public class CountDownTimer : MonoBehaviour
 
     private void SetYConstraint(bool constrain)
     {
-        foreach (Rigidbody rb in ballRigidbodies)
-        {
-            if (rb != null)
-            {
-                if (constrain)
-                {
+        foreach (Rigidbody rb in ballRigidbodies){
+            if (rb != null){
+                if (constrain){
                     // Freeze position on the Y-axis while preserving X and Z constraints
                     rb.constraints = RigidbodyConstraints.FreezePositionX | 
                                      RigidbodyConstraints.FreezePositionY | 
                                      RigidbodyConstraints.FreezePositionZ | 
                                      RigidbodyConstraints.FreezeRotation;
                 }
-                else
-                {
+                else{
                     // Keep X and Z position constraints, but remove the Y-axis constraint
                     rb.constraints = RigidbodyConstraints.FreezePositionX | 
                                      RigidbodyConstraints.FreezePositionZ | 

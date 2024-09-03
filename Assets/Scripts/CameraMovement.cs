@@ -11,8 +11,7 @@ public class CameraMovement : MonoBehaviour
     private float lowestYPosition;  // The lowest Y position the camera has reached
 
     void Start(){
-        if (target == null)
-        {
+        if (target == null){
             Debug.LogError("Target not set for CameraFollowDownOnlyWithTilt script. Please assign a target.");
             return;
         }

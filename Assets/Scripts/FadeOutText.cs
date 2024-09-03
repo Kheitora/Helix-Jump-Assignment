@@ -19,8 +19,7 @@ public class FadeOutText : MonoBehaviour
     // Public method to start the fade-out process
     public void StartFadeOut()
     {
-        if (textMeshPro != null)
-        {
+        if (textMeshPro != null){
             StartCoroutine(FadeOutCoroutine());
         }
     }
@@ -32,16 +31,13 @@ public class FadeOutText : MonoBehaviour
         TMP_TextInfo textInfo = textMeshPro.textInfo;
         int characterCount = textInfo.characterCount;
 
-        while (elapsedTime < fadeDuration)
-        {
+        while (elapsedTime < fadeDuration){
             elapsedTime += Time.deltaTime;
             float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
 
             // Update vertex colors
-            for (int i = 0; i < characterCount; i++)
-            {
-                if (textInfo.characterInfo[i].isVisible)
-                {
+            for (int i = 0; i < characterCount; i++){
+                if (textInfo.characterInfo[i].isVisible){
                     int vertexIndex = textInfo.characterInfo[i].vertexIndex;
                     int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
 
@@ -57,8 +53,7 @@ public class FadeOutText : MonoBehaviour
             }
 
             // Update the mesh with the new alpha values
-            for (int i = 0; i < textInfo.meshInfo.Length; i++)
-            {
+            for (int i = 0; i < textInfo.meshInfo.Length; i++){
                 textInfo.meshInfo[i].mesh.colors32 = textInfo.meshInfo[i].colors32;
                 textMeshPro.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
             }
@@ -67,10 +62,8 @@ public class FadeOutText : MonoBehaviour
         }
 
         // Ensure the text is completely faded out at the end
-        for (int i = 0; i < characterCount; i++)
-        {
-            if (textInfo.characterInfo[i].isVisible)
-            {
+        for (int i = 0; i < characterCount; i++){
+            if (textInfo.characterInfo[i].isVisible){
                 int vertexIndex = textInfo.characterInfo[i].vertexIndex;
                 int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
 
@@ -84,8 +77,7 @@ public class FadeOutText : MonoBehaviour
         }
 
         // Update the mesh with the final alpha values
-        for (int i = 0; i < textInfo.meshInfo.Length; i++)
-        {
+        for (int i = 0; i < textInfo.meshInfo.Length; i++){
             textInfo.meshInfo[i].mesh.colors32 = textInfo.meshInfo[i].colors32;
             textMeshPro.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
         }

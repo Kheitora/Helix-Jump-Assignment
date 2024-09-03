@@ -35,8 +35,7 @@ public class ImpactEffect : MonoBehaviour
 
         // Smoothly return to original size
         float elapsedTime = 0f;
-        while (elapsedTime < squishDuration)
-        {
+        while (elapsedTime < squishDuration){
             transform.localScale = Vector3.Lerp(squishScale, originalScale, (elapsedTime / squishDuration));
             elapsedTime += Time.deltaTime;
             yield return null;

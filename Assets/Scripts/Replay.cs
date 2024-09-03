@@ -11,8 +11,7 @@ public class Replay : MonoBehaviour
     void Start()
     {
         // Ensure the button is assigned and add a listener to it
-        if (reloadButton != null)
-        {
+        if (reloadButton != null){
             reloadButton.onClick.AddListener(ReloadCurrentScene);
         }
     }

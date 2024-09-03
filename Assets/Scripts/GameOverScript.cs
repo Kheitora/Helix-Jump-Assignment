@@ -14,14 +14,11 @@ public class GameOverScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("EndGame"))
-        {
-            if (CompareTag("Player1"))
-            {
+        if (other.CompareTag("EndGame")){
+            if (CompareTag("Player1")){
                 EndGame("Player 1 Wins!");
             }
-            else if (CompareTag("Player2"))
-            {
+            else if (CompareTag("Player2")){
                 EndGame("Player 2 Wins!");
             }
         }
@@ -36,19 +33,15 @@ public class GameOverScript : MonoBehaviour
 
     private void UpdateText(string message)
     {
-        foreach (TextMeshProUGUI text in gameEndTexts)
-        {
-            if (text != null)
-            {
+        foreach (TextMeshProUGUI text in gameEndTexts){
+            if (text != null){
                 text.text = message;
                 text.gameObject.SetActive(true);
             }
         }
 
-        foreach (Image image in images)
-        {
-            if (image != null)
-            {
+        foreach (Image image in images){
+            if (image != null){
                 image.gameObject.SetActive(true);
             }
         }
@@ -58,10 +51,8 @@ public class GameOverScript : MonoBehaviour
 
     private void ConstrainRigidbodies()
     {
-        foreach (Rigidbody rb in ballRigidbodies)
-        {
-            if (rb != null)
-            {
+        foreach (Rigidbody rb in ballRigidbodies){
+            if (rb != null){
                 rb.constraints = RigidbodyConstraints.FreezePositionY | 
                                  RigidbodyConstraints.FreezePositionX | 
                                  RigidbodyConstraints.FreezePositionZ | 

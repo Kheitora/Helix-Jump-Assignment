@@ -13,8 +13,7 @@ public class RainbowText : MonoBehaviour
         // Get the TextMeshProUGUI component attached to this GameObject
         textMeshPro = GetComponent<TextMeshProUGUI>();
 
-        if (textMeshPro != null)
-        {
+        if (textMeshPro != null){
             ApplyRainbowColors();
         }
     }
@@ -25,8 +24,7 @@ public class RainbowText : MonoBehaviour
         textMeshPro.text = "";  // Clear the text to rebuild it with colors
 
         // Loop through each character in the text
-        for (int i = 0; i < text.Length; i++)
-        {
+        for (int i = 0; i < text.Length; i++){
             // Get the color from the rainbowColors array, cycling through the colors
             Color color = rainbowColors[i % rainbowColors.Length];
 

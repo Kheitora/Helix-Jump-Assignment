@@ -13,20 +13,16 @@ public class LockMovementPowerUp : MonoBehaviour
         GameObject[] player1Objects = GameObject.FindGameObjectsWithTag("Player1");
         GameObject[] player2Objects = GameObject.FindGameObjectsWithTag("Player2");
 
-        foreach (GameObject player in player1Objects)
-        {
+        foreach (GameObject player in player1Objects){
             Rigidbody rb = player.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
+            if (rb != null){
                 player1Rigidbodies.Add(rb);
             }
         }
 
-        foreach (GameObject player in player2Objects)
-        {
+        foreach (GameObject player in player2Objects){
             Rigidbody rb = player.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
+            if (rb != null){
                 player2Rigidbodies.Add(rb);
             }
         }
@@ -34,17 +30,14 @@ public class LockMovementPowerUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         GameObject powerManagerObj = new GameObject("PowerManager");
         PowerManager powerManager = powerManagerObj.AddComponent<PowerManager>();
 
-        if (other.CompareTag("Player1"))
-        {
+        if (other.CompareTag("Player1")){
             powerManager.StartPowerCoroutine(player2Rigidbodies, 2f);
             Destroy(gameObject);
         }
-        else if (other.CompareTag("Player2"))
-        {
+        else if (other.CompareTag("Player2")){
             powerManager.StartPowerCoroutine(player1Rigidbodies, 2f);
             Destroy(gameObject);
         }
@@ -66,20 +59,17 @@ public class LockMovementPowerUp : MonoBehaviour
 
     private void SetYConstraint(List<Rigidbody> targetRigidbodies, bool constrain)
     {
-        foreach (Rigidbody rb in targetRigidbodies)
-        {
-            if (rb != null)
-            {
-                if (constrain)
-                {
+        foreach (Rigidbody rb in targetRigidbodies){
+        
+            if (rb != null){
+                if (constrain){
                     // Freeze position on the Y-axis while preserving X and Z constraints
                     rb.constraints = RigidbodyConstraints.FreezePositionX | 
                                      RigidbodyConstraints.FreezePositionY | 
                                      RigidbodyConstraints.FreezePositionZ | 
                                      RigidbodyConstraints.FreezeRotation;
                 }
-                else
-                {
+                else{
                     // Keep X and Z position constraints, but remove the Y-axis constraint
                     rb.constraints = RigidbodyConstraints.FreezePositionX | 
                                      RigidbodyConstraints.FreezePositionZ | 
